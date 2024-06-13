@@ -1,0 +1,142 @@
+/* style guides
+
+1) color
+color: #111;
+color: #fff;
+
+2) font
+korean
+font-family: 'Noto Sans KR', sans-serif;
+english
+font-family: 'Montserrat Alternates', sans-serif;
+
+Black => font-weight: 900;
+Bold => font-weight: 700;
+Regular => font-weight: 400;
+Thin => font-weight: 100;
+
+제목 
+font-size: 32~34px;
+부제목 
+font-size: 24~28px;
+본문 
+font-size: 18~20px;
+font-weight: 400;
+본문 작게 
+font-size: 12~14px;
+
+3) 해상도 기준
+최소 1280*800 기준(맥북 13인치)
+
+4) z-index 단위
+header: 0 ~ 100
+main : -200
+about : -100
+work : 0
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* common */
+* {
+    margin: 0; padding: 0; color: #111;
+    font-family: 'Montserrat Alternates', 'Noto Sans KR', sans-serif; font-weight: 400; 
+  }
+li {list-style: none;}
+a {text-decoration: none;}
+
+
+
+/* Locomotive Scroll */
+.has-scroll-smooth {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+
+/*----------------------wrap----------------------*/
+.wrap {
+  padding: 0 120px;
+  box-sizing: border-box;
+  background-color: #111;
+}
+.cover {
+  padding: 60px 0;
+  box-sizing: border-box;
+}
+.cover h1 {
+  text-align: center;
+  font-size: 33px;
+  font-weight: 700;
+  margin-bottom: 121px;
+  position: relative;
+  color: whitesmoke;
+}
+.cover h1::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background-color: whitesmoke;
+  position: absolute;
+  bottom: -60px; left: 50%;
+  transform: translateX(-50%);
+}
+
+.disc {
+  display: flex;
+  gap: 100px;
+}
+.disc ul {
+  flex: 1;
+}
+.disc ul li {
+  margin-bottom: 30px;
+}
+.disc ul:last-child {
+  margin-bottom: 60px;
+}
+.disc ul:first-child li {
+  display: inline-block;
+  margin-right: 60px;
+}
+.disc ul:first-child li:last-child {
+  margin-right: 0;
+}
+
+.disc__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: whitesmoke;
+}
+.disc p {
+  color: whitesmoke;
+}
+.disc__skill span {
+  display: inline-block;
+  font-size: 14px;
+  color: #111;
+  background-color: whitesmoke;
+  padding: 5px 7px;
+  margin-right: 5px;
+}
+.disc__disc {
+  margin-bottom: 30px;
+  line-height: 26px;
+  color: whitesmoke;
+}
+
+.work_imgs {
+  width: 100%;
+}
+.work_imgs img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
